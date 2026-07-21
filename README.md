@@ -24,7 +24,7 @@ Active Directory is the identity backbone of nearly every enterprise Windows env
 
 ## The Business Problem This Lab Solves
 
-Every organisation that runs Windows infrastructure relies on Active Directory to answer one fundamental question: **who is allowed to do what?**
+Every organization that runs Windows infrastructure relies on Active Directory to answer one fundamental question: **who is allowed to do what?**
 
 When a new employee joins, IT creates their account in AD and adds them to the right groups. Their access to email, shared drives, printers, and applications is granted automatically based on group membership. When they leave, IT disables one account and every door closes simultaneously.
 
@@ -48,7 +48,7 @@ This is not legacy technology. Hybrid environments sync on-premises AD identitie
 | Skill | Real-World Application |
 |---|---|
 | Promote a Windows Server to Domain Controller | The first step in every enterprise Windows environment |
-| Create Organisational Units (OUs) | Apply different policies to different departments from one place |
+| Create organizational Units (OUs) | Apply different policies to different departments from one place |
 | Create users, groups, and group memberships | Every access decision in an enterprise is group-based |
 | Configure Group Policy Objects (GPOs) | Enforce settings across every machine in the domain centrally |
 | Join a machine to the domain | Connect a workstation as a managed, policy-enforced resource |
@@ -153,11 +153,11 @@ Install-ADDSForest `
 
 ---
 
-### Step 3 — Build the Organisational Structure
+### Step 3 — Build the organizational Structure
 
 Open **Active Directory Users and Computers (ADUC)** from the Tools menu in Server Manager.
 
-**Create Organisational Units:**
+**Create organizational Units:**
 ```powershell
 New-ADOrganizationalUnit -Name "IT"        -Path "DC=lab,DC=local"
 New-ADOrganizationalUnit -Name "Finance"   -Path "DC=lab,DC=local"
@@ -298,9 +298,9 @@ Run these commands to confirm everything is working before you wrap up:
 | Term | What It Is |
 |---|---|
 | **Domain Controller (DC)** | The server that runs Active Directory and handles all authentication decisions |
-| **Forest** | The top-level container of your entire AD structure — represents the organisation |
+| **Forest** | The top-level container of your entire AD structure — represents the organization |
 | **Domain** | A boundary inside the forest with a name (e.g., `lab.local`) — everything inside is managed together |
-| **Organisational Unit (OU)** | A folder in AD used to organise users, computers, and groups — and link Group Policy |
+| **organizational Unit (OU)** | A folder in AD used to organise users, computers, and groups — and link Group Policy |
 | **Security Group** | A container of user accounts used to grant access to resources at scale |
 | **Group Policy Object (GPO)** | A collection of settings automatically applied to users and computers inside an OU |
 | **DSRM** | Directory Services Restore Mode — emergency recovery access; write the password down |
