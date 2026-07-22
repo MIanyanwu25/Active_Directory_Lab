@@ -220,10 +220,10 @@ Open **Group Policy Management** from the Tools menu in Server Manager.
 
 | Policy Path | Setting | Value |
 |---|---|---|
-| Computer Config → Windows Settings → Security → Account Policies → Password Policy | Minimum password length | 12 |
-| Computer Config → Windows Settings → Security → Account Policies → Password Policy | Password must meet complexity requirements | Enabled |
-| Computer Config → Windows Settings → Security → Local Policies → Security Options | Interactive logon: Machine inactivity limit | 900 seconds |
-| Computer Config → Administrative Templates → System → Removable Storage Access | All removable storage classes: Deny all access | Enabled |
+| Computer Config → Policies → Windows Settings → Security → Account Policies → Password Policy | Minimum password length | 12 |
+| Computer Config → Policies → Windows Settings → Security → Account Policies → Password Policy | Password must meet complexity requirements | Enabled |
+| Computer Config → Policies → Windows Settings → Security → Local Policies → Security Options | Interactive logon: Machine inactivity limit | 900 seconds |
+| Computer Config → Policies → Administrative Templates → System → Removable Storage Access | All removable storage classes: Deny all access | Enabled |
 
 > 💡 Test your GPO: join a second VM to lab.local, move its computer account into the IT OU, run `gpupdate /force`, then log in as `alice.chen` and verify the screen lock policy applies.
 
